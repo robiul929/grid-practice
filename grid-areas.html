@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Area Define</title>
+    <style>
+        /* Define grid areas */
+        .header{
+            grid-area: header;
+        }
+        .nav{
+            grid-area: nav;
+        }
+
+        .main{
+            grid-area: main;
+        }
+        .sidebar{
+            grid-area: sidebar;
+        }
+        .ad{
+            grid-area: ad;
+        }
+        .footer{
+            grid-area: footer;
+        }
+
+        /* grid area's style */
+        .grid-container{
+            display: grid;
+            gap: 20px;
+            grid-template-areas: 
+            "header header header header"
+            "nav main main sidebar"
+            "nav main main ad"
+            "footer footer footer footer"
+            ;
+        }
+        /* Style for understanding areas */
+        .header,.nav,.main,.sidebar,.ad,.footer{
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body class="grid-container">
+    <header class="header">
+        <h3>This is Header</h3>
+    </header>
+    <nav class="nav">
+        <ul>
+            <li><a href="">nav-1</a></li>
+            <li><a href="">nav-2</a></li>
+            <li><a href="">nav-3</a></li>
+        </ul>
+    </nav>
+    <main class="main">
+        <article>
+            <h3>This is article 1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus magni pariatur, maiores impedit veniam temporibus, facere reiciendis laudantium explicabo, et sapiente. Labore quaerat perferendis officiis quia earum reprehenderit iure. Sed! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex provident natus ab error animi quia eos commodi sit maiores exercitationem!</p>
+            <button>Read More</button>
+        </article>
+        <article>
+            <h3>This is article 2</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus magni pariatur, maiores impedit veniam temporibus, facere reiciendis laudantium explicabo, et sapiente. Labore quaerat perferendis officiis quia earum reprehenderit iure. Sed! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex provident natus ab error animi quia eos commodi sit maiores exercitationem!</p>
+            <button>Read More</button>
+        </article>
+    </main>
+    <aside class="sidebar">
+        <h3>Sidebar</h3>
+        <ul>
+            <li><a href="">side-1</a></li>
+            <li><a href="">side-2</a></li>
+            <li><a href="">side-3</a></li>
+        </ul>
+    </aside>
+    <div class="ad">
+        <h3>Advertising</h3>
+    </div>
+    <footer class="footer">
+        <h3>This is footer</h3>
+    </footer>
+</body>
+</html>
